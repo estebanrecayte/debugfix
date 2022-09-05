@@ -42,6 +42,7 @@ namespace WordsPhrases
             this.words.Remove(word);
         }
 
+
         /// <summary>
         /// Concatena las palabras de la frase.
         /// </summary>
@@ -52,13 +53,19 @@ namespace WordsPhrases
 
             foreach (Word word in this.words)
             {
-                phrase.Append(" ");
+                
                 phrase.Append(word.Text);
+                phrase.Append(" ");
+                
             }
 
             string result = phrase.ToString();
+            //result = result.TrimStart();
+            //result = result.TrimEnd();
+            //result = result.TrimStart(' ');
 
             // Remueve el primer espacio que se agrega siempre
+
 
             return result;
         }
